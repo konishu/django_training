@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">詳細画面</h1>
+        <p class="lead">todolist の詳細です</p>
+    </div>
+</div>
+{% endblock header %}
+
+{% block content %}
+<div class="container col-8">
+    <div class="alert alert-success" role="alert">
+        <p>タイトル:{{ object.title }}</p>　
+        <!-- #object.hogeとすることで、それぞれの数に応じたデータを引っ張れる -->
+        <p>中身:{{ object.memo }}</p>
+        <p>期日:{{ object.priority }}</p>
+    </div>
+</div>
+{% endblock content %}
